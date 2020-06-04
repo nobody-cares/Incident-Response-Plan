@@ -1,0 +1,43 @@
+User Accounts
+---------------
+net user
+net localgroup administrators
+use lusrmgr.msc for GUI access
+
+
+Processes
+--------------
+tasklist
+wmic process list full
+wmic process get name,parentprocessid,processid
+wmic process where processid pid ] get commandline
+use taskmgr.exe for GUI access
+
+Services
+-----------
+net start
+sc query | more
+tasklist /svc
+use services.msc for GUI access
+
+Scheduled Tasks 
+-----------------
+schtasks
+dir /s /b " Documents and Settings \\[ Start Menu\"
+dir /s /b " Users \\[ Start Menu\"
+
+
+Discover sessions the machine has opened with other systems
+-----------------------------------------------------------
+net use
+
+Log Entries
+--------------
+wevtutil qe security
+
+Auto start Reg Key Entries
+---------------------------------
+HKLM\Software\Microsoft\Windows\CurrentVersion\Run
+HKLM\Software\Microsoft\Windows\CurrentVersion\Runonce
+HKLM\Software\Microsoft\Windows\CurrentVersion\RunonceEx
+reg query [reg key]
