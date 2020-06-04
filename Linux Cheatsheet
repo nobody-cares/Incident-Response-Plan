@@ -1,0 +1,30 @@
+User Accounts
+-------------
+grep :0: /etc/passwd
+find / -nouser -print (It will show the temp users)
+
+Processes
+----------
+ps aux
+lsof -p [pid]
+
+Services
+---------
+service --status-all
+chkconfig -list
+
+Scheduled Taks
+--------------
+crontab -l -u [account]
+cat /etc/crontab
+cat /etc/cron.*
+
+Active TCP and UDP connections
+------------------------------
+lsof -i
+netstat -nap
+
+ARP
+----
+arp -a
+
